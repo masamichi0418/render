@@ -7,7 +7,7 @@ services:
     plan: free
     region: singapore
     buildCommand: pip3 install -r requirements.txt && python manage.py collectstatic --no-input && python manage.py migrate
-    startCommand: gunicorn MLAPP.wsgi:application
+    startCommand: gunicorn render.wsgi:application
     envVars:
       - key: SECRET_KEY
         generateValue: true

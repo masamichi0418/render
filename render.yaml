@@ -2,7 +2,7 @@ services:
   - name: render
     type: web
     env: python
-    repo: https://github.com/git@github.com:masamichi0418/render.git 
+    repo: https://github.com/masamichi0418/render.git 
     branch: main
     plan: free
     region: singapore

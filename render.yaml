@@ -19,6 +19,6 @@ services:
           property: connectionString
 
 databases:
-  - name: MLDB
+  - name: test_db
     plan: free
     region: singapore

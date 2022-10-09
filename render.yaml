@@ -13,7 +13,7 @@ services:
         generateValue: true
       - key: PYTHON_VERSION
         value: 3.10.7
-      - key: postgres://app_user:M7HOOxA2DMqhuY00QrfxBtGM7i49AWNA@dpg-cctrlfqen0hklj1nbj40-a.singapore-postgres.render.com/django_baby_db_name_28hd
+      - key: postgres://app_user:M7HOOxA2DMqhuY00QrfxBtGM7i49AWNA@dpg-cctrlfqen0hklj1nbj40-a/django_baby_db_name_28hd
         fromDatabase:
           name: test_db
           property: connectionString

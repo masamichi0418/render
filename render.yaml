@@ -3,7 +3,7 @@ services:
     type: web
     env: python
     repo: https://github.com/masamichi0418/render.git 
-    branch: main
+    branch: master
     plan: free
     region: singapore
     buildCommand: pip3 install -r requirements.txt && python manage.py collectstatic --no-input && python manage.py migrate

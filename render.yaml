@@ -1,0 +1,24 @@
+services:
+  - name: アプリ名
+    type: web
+    env: python
+    repo: https://github.com/git@github.com:masamichi0418/render.git 
+    branch: main
+    plan: free
+    region: singapore
+    buildCommand: pip3 install -r requirements.txt && python manage.py collectstatic --no-input && python manage.py migrate
+    startCommand: gunicorn アプリ名.wsgi:application
+    envVars:
+      - key: SECRET_KEY
+        generateValue: true
+      - key: PYTHON_VERSION
+        value: 3.10.7
+      - key: DATABASE_URL
+        fromDatabase:
+          name: データベース名
+          property: connectionString
+
+databases:
+  - name: データベース名
+    plan: free
+    region: singapore

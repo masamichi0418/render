@@ -1,5 +1,5 @@
 services:
-  - name: MLAPP
+  - name: render
     type: web
     env: python
     repo: https://github.com/git@github.com:masamichi0418/render.git 
@@ -13,9 +13,9 @@ services:
         generateValue: true
       - key: PYTHON_VERSION
         value: 3.10.7
-      - key: DATABASE_URL
+      - key: postgres://app_user:M7HOOxA2DMqhuY00QrfxBtGM7i49AWNA@dpg-cctrlfqen0hklj1nbj40-a.singapore-postgres.render.com/django_baby_db_name_28hd
         fromDatabase:
-          name: MLDB
+          name: test_db
           property: connectionString
 
 databases:
